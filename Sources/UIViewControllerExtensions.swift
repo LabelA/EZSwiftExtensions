@@ -250,7 +250,8 @@ extension UIViewController {
     }
     
     ///EZSE: Presents a view controller modally.
-    open func presentVC(_ vc: UIViewController) {
+    open func presentVC(_ vc: UIViewController, modalPresentationStyle: UIModalPresentationStyle = .fullScreen) {
+        vc.modalPresentationStyle = modalPresentationStyle
         present(vc, animated: true, completion: nil)
     }
     
